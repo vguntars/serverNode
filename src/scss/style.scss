@@ -1,0 +1,73 @@
+@import './primitives/primitives-init';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bada55;
+}
+
+p,
+a,
+button {
+  margin: 1rem;
+}
+
+a,
+button {
+  font-size: 1.5rem;
+}
+
+form {
+  margin: 1rem;
+  max-width: 300px;
+  padding: 1rem;
+  border: 2px solid green;
+
+  [type="submit"] {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    background: green;
+    color: white;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button {
+  &.report {
+    display: block;
+    background-color: darken(#bada55, 25%);
+    color: #fff;
+  }
+}
+
+.rep {
+  font-size: 1.2rem;
+  margin: 1rem;
+
+  td,
+  th {
+    border: 1px solid darken(#bada55, 25%);
+    padding: 8px;
+  }
+
+  tr:nth-child(odd) {
+    background-color: darken(#bada55, 10%);
+  }
+
+  tr:nth-child(even) {
+    background-color: lighten(#bada55, 10%);
+  }
+}

@@ -1,0 +1,79 @@
+h1 {
+  color: red;
+  background-color: grey;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bada55;
+}
+
+p,
+a,
+button {
+  margin: 1rem;
+}
+
+a,
+button {
+  font-size: 1.5rem;
+}
+
+form {
+  margin: 1rem;
+  max-width: 300px;
+  padding: 1rem;
+  border: 2px solid green;
+}
+
+form [type="submit"] {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  background: green;
+  color: white;
+}
+
+form input {
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button.report {
+  display: block;
+  background-color: #75901f;
+  color: #fff;
+}
+
+.rep {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.rep td,
+.rep th {
+  border: 1px solid #75901f;
+  padding: 8px;
+}
+
+.rep tr:nth-child(odd) {
+  background-color: #a8cf2d;
+}
+
+.rep tr:nth-child(even) {
+  background-color: #cbe37f;
+}
+/*# sourceMappingURL=style.css.map */
