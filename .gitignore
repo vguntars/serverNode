@@ -2,6 +2,7 @@
 
 # compiled output
 
+/server/server_data/*
 /tmp
 
 # dependencies
