@@ -1,15 +1,14 @@
 //
 (function () {
   window.addEventListener('load', () => {
-    let cnt = 0;
     document.querySelector('button.send')
       .addEventListener('click', () => {
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
+          if (this.readyState == 4 && (this.status == 200 || this.status == 400)) {
             let atb = document.querySelector('.dialog');
-            cnt += 1;
             atb.innerHTML = this.responseText;
+            atb.style.color = (this.status == 400) ? 'red' : '';
           }
         };
         let data = {

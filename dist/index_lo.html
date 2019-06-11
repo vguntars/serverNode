@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TESTS</title>
 
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
@@ -43,17 +43,17 @@
       quod molestiae ab recusandae, beatae commodi maiores aliquam possimus delectus, obcaecati quisquam. Iure.
     </p>
 
-    <a href="lor">LOR</a>
-    <a href="rus">RUS</a>
+    <a href="/lor">LOR</a>
+    <a href="/rus">RUS</a>
 
-    <button onclick="location.href='lor'">LOR</button>
-    <button onclick="location.href='rus'">RUS</button>
+    <button onclick="location.href='/lor'">LOR</button>
+    <button onclick="location.href='/rus'">RUS</button>
   </div>
 
   <div class="container">
-    <form action="form" method="POST">
+    <form action="lor/form" method="POST">
       Kļička (1-50 zīmes):<br>
-      <input id="kuku" type="text" name="name" value=""><br>
+      <input type="text" name="name" value=""><br>
       Vecums (no 18 gadiem):<br>
       <input type="text" name="age" value=""><br>
       <br><input type="submit" value="nosūtīt no formas">
@@ -63,7 +63,7 @@
       <button type="button" class="report">ATSKAITE</button>
   </div>
 
-  <script src="static/js/lor.js"></script>
+  <script src="/static/js/lor.js"></script>
 
 </body>
 
