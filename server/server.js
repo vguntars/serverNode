@@ -10,28 +10,37 @@ app.use(ex.urlencoded({ extended: false }));
 app.use(cp());
 app.use('/static', ex.static(path.join(__dirname, '..', 'dist')));
 
+/////////// nunjucks BANZAI!
+const nu = require('nunjucks');
+nu.configure(path.join(__dirname, 'html_temp'), {
+  autoescape: true,
+  express: app
+});
+///////////
+
 
 app.use('/rus', require(path.join(__dirname, 'routes', 'route_rus')));
 app.use('/lor', require(path.join(__dirname, 'routes', 'route_lor')));
+app.use('/test', require(path.join(__dirname, 'routes', 'route_render')));
 
 
-let i = 0;
-app.use(['/kuku', '/kyky'], (req, res, next) => {
-  i += 1;
-  next();
-});
+//
+// let i = 0;
+// app.use(['/kuku', '/kyky'], (req, res, next) => {
+//   i += 1;
+//   next();
+// });
 
 // app.use(['/kuku', '/kyky'], (req, res, next) => {
 //   res.status(100).send('<h1>NE KUKUJ</h1>');
 //   next();
 //  });
 
-app.get(['/kuku', '/kyky'], (req, res) => {
-  setTimeout(() => {
-    res.send(`<h1>KUKU (${i})</h1>`);
-  }, 1000);
-});
-
+// app.get(['/kuku', '/kyky'], (req, res) => {
+//   setTimeout(() => {
+//     res.send(`<h1>KUKU (${i})</h1>`);
+//   }, 1000);
+// });
 
 // app.get('/ac', (req, res) => {
 //   res.writeHead(301,
@@ -39,7 +48,7 @@ app.get(['/kuku', '/kyky'], (req, res) => {
 //   );
 //   res.end();
 // });
-
+//
 
 
 app.get('/', (req, res) => {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <h1>{{header}}</h1>
+  <div class="container">
+    {{h2|safe}}
+    <ul>
+      {% for i in range(1, 6) %}
+      <li>{{i}}.
+        {{text}}</li>
+      {% endfor %}
+    </ul>
+
+    {% for item in links %}
+    {{item|safe}}
+    {% else %}
+    <p>This would display if the collection were empty<p>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
